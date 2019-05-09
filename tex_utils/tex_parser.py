@@ -8,7 +8,7 @@
 import sys
 import re
 
-def parseTags(s : str): -> List[str]
+def parseTags(s : str) -> List[str]:
 	""" Given a string s, returns the list of everything between [[ ]]
 		brackets. """
 	return re.findall('\[\[(.*?)\]\]',s)
