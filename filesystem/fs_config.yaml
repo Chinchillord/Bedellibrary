@@ -1,0 +1,10 @@
+# Note: paths are relative to the *filesystem* directory in the Bedelllibrary folder.
+
+pdf_sources:
+  - ../tests/pdf
+
+tex_sources:
+  - ../tests/tex_notes
+
+notebook_sources:
+  - ../tests/notebook

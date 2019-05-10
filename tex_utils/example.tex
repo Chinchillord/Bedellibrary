@@ -1,0 +1,27 @@
+\documentclass{article}
+
+\begin{document}
+
+	This is just a test of my praser. I had some ideas about exactly what I wanted to do with this project in here before, but I accidentally deleted them, so I guess I have to write that all out again...
+
+%% document(this_document).
+%% purpose(this_document, "This document is to test my parser and to explain my ideas and intended use cases of this project.").
+
+% This is a comment, this should not get coppied.
+
+The idea of the project is to be able to make annotations in (initally) my LaTeX files, and perhaps eventually other things, like notes I've taken from my pdfs, or otherwise notes that I've written \textit{about} some paper, some book, etc... and to be able to have this all automatically sync up with a central prolog knowledge base which is a connected to a digital personal assistant like [[Zamia-AI : software]] or [[Mycroft : software]]. In order for this to work properly, I need to implement more features than I currently have in my parser. For one, I need a way to parse in-line annotations like the above, and translate them into relevant prolog statements. Moreover, in order to properly answer all of the queries that I might want to answer, I will also have to have a system for annotating all of this with (e.x.) time information, etc...
+
+Below are some examples of queries I would like to implement in this system:
+
+\begin{enumerate}
+	\item ``Zamia, list me all of the questions I have in my master's thesis.''
+	\item ``Zamia, list me all of the questions I have in chapter 3 of my master's thesis.''
+	\item ``Zamia, copy the bibtex reference of Lawvere's seminal paper on the ETCS into my clipboard.''
+	\item ``Zamia, what was the name of that paper I read last month on quantum mechanics that had to do with domain theory?'' 
+	\item ``Zamia, what was that comment by Wittgenstein in Philosophical Investigations that reminded me of quantum mechanics?''
+
+... And so on and so forth. I'm sure that there are plenty of other examples that I could think of along these lines, but hopefully this is a good example of what I would like to do.
+
+I should also have a way of interfacing databases that I already have (e.x. with my books) with prolog.
+
+\end{document}
