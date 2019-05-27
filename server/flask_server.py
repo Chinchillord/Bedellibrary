@@ -75,27 +75,27 @@ app = Flask("Bedell library service")
 @app.route('/query')
 def query():
 
-    users = getUserDatabase()
+    users = get_user_database()
     
     password = request.args.get('password')
     user = request.args.get('user')
     
-    pl_server_start        = request.args.get('pl_server_start')
-    pl_server_stop         = request.args.get('pl_server_stop')
-    pl_server_query_direct = request.args.get('pl_server_query_direct')
-    pl_server_query        = request.args.get('pl_server_query')
-    pl_server_ontology_add = request.args.get('pl_server_ontology_add')
-    pl_server_fact_add     = request.args.get('pl_server_fact_add')
+    pl_server_start_request        = request.args.get('pl_server_start')
+    pl_server_stop_request         = request.args.get('pl_server_stop')
+    pl_server_query_direct_request = request.args.get('pl_server_query_direct')
+    pl_server_query_request        = request.args.get('pl_server_query')
+    pl_server_ontology_add_request = request.args.get('pl_server_ontology_add')
+    pl_server_fact_add_request     = request.args.get('pl_server_fact_add')
     
-    inputBoolArgs = [pl_server_start, pl_server_stop, pl_server_query_direct, pl_server_query,
-                     pl_server_ontology_add, pl_server_fact_add]
+    inputBoolArgs = [pl_server_start_request, pl_server_stop_request, pl_server_query_direct_request,
+                     pl_server_query_request, pl_server_ontology_add_request, pl_server_fact_add_request]
     
     try:
-        boolArgs = map(toBool, inputBoolArgs)
+        bool_args = map(to_bool, input_bool_args)
     except Exception as e:
         # TODO: handle bad http request
     
-    if ((password != None) & (user != None) & exactlyOneTrue boolArgs):
+    if (password is not None) & (user is not None) & exactly_one_true(bool_args):
         # TODO: Check user privileges, preform the relevant action
         # if the user is allowed to.
     else:
