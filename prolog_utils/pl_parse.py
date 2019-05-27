@@ -7,9 +7,11 @@
 
 from functools import reduce
 
+
 def strip_whitespace(s : str) -> str:
     """ removes all whitespace from the string s. """
     return ''.join(s.split())
+
 
 def parse_prolog_file(lines : [str]) -> [Dict[str, Any]]:
     """  """
@@ -17,6 +19,7 @@ def parse_prolog_file(lines : [str]) -> [Dict[str, Any]]:
     lines = reduce(lambda x, y: x+y, lines, "")
     statements = lines.split(".")
     return map(parse_prolog_statement, statements)
+
 
 def parse_prolog_statement(s : str) -> Dict[str, Any]:
     """ Parses a single prolog statement into dict format.

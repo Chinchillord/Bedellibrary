@@ -7,18 +7,21 @@ pdf_sources:
   
 store_pdf_sources_locally: True
 store_pdf_sources_mongodb: False
-mongodb_path_pdf_sources: None
+mongodb_url_pdf_sources: None
+mongodb_port_pdf_sources: None
 
 tex_sources:
   - ../tests/tex_notes
   
 store_tex_sources_locally: True
 store_tex_sources_mongodb: False
-mongodb_path_tex_sources: None
+mongodb_url_tex_sources: None
+mongodb_port_tex_sources: None
 
 notebook_sources:
   - ../tests/notebook
 
 store_notebook_sources_locally: True
 store_notebook_sources_mongodb: False
-mongodb_path_notebook_sources: None
+mongodb_url_notebook_sources: None
+mongodb_port_notebook_sources: None

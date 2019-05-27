@@ -7,6 +7,7 @@ testd = {'head': 'k',
                     ]
         }
 
+
 def format_args(args : [str]) -> str:
     """ Helper function to format a list of arguments as a 
         string of comma seperated characters """
@@ -15,6 +16,7 @@ def format_args(args : [str]) -> str:
         x += ","
         x += i
     return x
+
 
 def dict_to_pl(d : Dict[str, Any]) -> Optional[str]:
     """ Takes a dictionary representation of a prolog term

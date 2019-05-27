@@ -1,7 +1,8 @@
 from yaml import load, dump
 from yaml import Loader, Dumper
 
-def openFilesysConfig() -> Dict[str,str]:
+
+def open_filesys_config() -> Dict[str,str]:
 	fsconfig = open("fs_config.yaml")
 	
 	# How to extract data from the config file:

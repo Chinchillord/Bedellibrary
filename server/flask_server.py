@@ -62,7 +62,9 @@ security_level_params = { SecurityLevel.Admin         : [e for e in AccessParame
                                                          AccessParameter.server_ontology_add,
                                                          AccessParameter.server_fact_add] 
                         }
-def getUserDatabase():
+
+
+def get_user_database():
     """ """
     return TinyDB('users.json')
     
@@ -73,7 +75,7 @@ app = Flask("Bedell library service")
 @app.route('/query')
 def query():
 
-	users = getUserDatabase()
+    users = getUserDatabase()
     
     password = request.args.get('password')
     user = request.args.get('user')
@@ -98,32 +100,38 @@ def query():
         # if the user is allowed to.
     else:
         # TODO: do error handling
-        
+
+
 def pl_server_start():
     """ """
     prolog = Prolog()
-    
+
+
 def pl_server_stop():
     """ """
-    
+
+
 def pl_server_query_direct():
     """ """
-    
+
+
 def pl_server_query(query : str):
     """ """
     return prolog.query(query)
-    
+
+
 def pl_server_ontology_add():
     """ """
-    
+
+
 def pl_server_fact_add(query : str):
     """ """
     return db.add(query)
-    
+
+
 def pl_server_assert(query : str):
     """ """
     return prolog.assertz(query)
-
 
 
 if __name__ == '__main__':

@@ -2,7 +2,8 @@ from tinydb import TinyDB, Query
 from yaml import load, dump
 from yaml import Loader, Dumper
 
-def openDbConfig() -> Dict[str,str]:
+
+def open_db_config() -> Dict[str,str]:
 	dbconfig = open("db_config.yaml")
 	data = load(dbconfig, Loader=Loader)
 	
