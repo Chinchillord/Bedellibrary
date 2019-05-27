@@ -11,8 +11,13 @@
 # For instance, in prolog, this would look something like:
 #
 # text(comment_id, "This is text text of the comment that was extracted from the pdf.").
-# time(comment_id, "13:42"). % NOTE: 24-hr format used internally for simplicity.
+# time(comment_id, "13:42").      % NOTE: 24-hr format used internally for simplicity.
 # date(comment_id, "2019-05-18"). % NOTE: Use ISO standard for dates.
+# file(comment_id, file_id)       % file_id is the file the comment appears in
+# page_number(comment_id, 4)      % This gives the page_number the comment appears on. 
+#
+# Note that *the file_id* together with the *comment_id* uniquely determine a given comment. Two comments
+# from different files can have the same comment_id.
 #
 # Note: This doesn't have to nescesarialy be stored serially in this prolog format. We may want to use
 # csv, or even a dedicated database for this purpose.

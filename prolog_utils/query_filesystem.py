@@ -10,6 +10,8 @@
 #######################################################################################################################
 
 from pyswip import Prolog
+from pymongo import MongoClient
+
 # TODO: How do we import python files from other parts of our project directory here?
 # I'm not sure if what I have below is the right syntax.
 # from Bedelllibrary.nat_lang_tools.prolog_to_text import toText

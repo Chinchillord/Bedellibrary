@@ -40,6 +40,8 @@ def initalizeDirectory(filetypes : [str], dir : str):
 	""" Initialize a directory by creating .file_DATA directories for all files 
 	    with extension in *filetypes* which are (recursively) in directory *dir* """
 	# TODO: I'm not sure if this works, needs to be tested.
+	# We'll definitely want to use some libraries for file path manipulation here
+	# (if they exist).
 	for root, dirs, files in os.walk(dir):
 		for file in files:
 			if file.extension() in filetypes:

@@ -9,7 +9,7 @@ is_a(semigroup, algebraic_structure).
 is_a(group,     algebraic_structure).
 	is_a(group, monoid).
 	is_a(monoid, semigroups).
-is_a(ring,      mathematical_structure).
+is_a(rng,      mathematical_structure).
 is_a(field,     mathematical_structure).
 
 is_a(field, ring).
