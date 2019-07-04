@@ -30,8 +30,22 @@ def dict_to_pl(d : Dict[str, Any]) -> Optional[str]:
         return (head + "(" + format_args(list(map(dict_to_pl, args))) + ")")
             
 
-def pl_to_dict(s : str) -> Optional[Dict[str, Any]]:
-    """ Parse prolog facts into dict format so that they can be stored in a database. """
+def pl_to_dict():
+    """ Parse prolog facts into dict format so that they can be stored in a database. 
+        
+        For example, this should also be able to parse terms such as:
+             (p(x) ; q(x)) , r(x,y(z))
+        As a general procedure for doing this, consider:
+            1. split into a list of prolog terms seperated by , and ;'s (as well as 
+               prolog expressions that have already been parenthesized, such as above.
+            2. Add nescesary parenthesis ( and should have higher prescendence than or )  
+    """
+
+def is_term():
+    """ """
+
+def parse_individual_term(s : str) -> Optional[Dict[str, Any]]:
+    """  """
     # Find the outermost pair of parentheses
     i1 = s.find("(")
     # i2 = s.find(")") # This is wrong

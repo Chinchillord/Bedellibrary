@@ -1,0 +1,62 @@
+[[ Haskell Libraries and Tools I Like : title(self, haskell_libraries_i_like) ]]
+======================================================================
+
+%%
+%% likes(nate,X)  :- entry_of(X, self), type(X, haskell_library)
+%%
+
+> log note "One of the things I could do is configure my http server to serve up
+> wiki pages corresponding to specific queries. For instance, I could do someting
+> like "myserver/listings.html?query="note(X), uncategorized(X)"", and this would
+> create a markdown file with all of my uncategorized notes, and then redirect
+> the user to myserver/index.html?#newly_generated_md_file.md. Although, the
+> question now is: What do I do after the file has (presumably) been created?"
+
+Haskell Libraries I like
+------------------------
+
+* [pyfi](https://github.com/Russell91/pyfi) This library provides a very nice
+  interface from Haskell to Python by letting you write Python code directly
+  in Haskell by means of template Haskell.
+
+[[ Note: I will need to write a perser for "prolog terms" which also includes this quasi JSON notation : is_a(self, todo_note(<with_respect_to_this_project>)) ]]
+Note: Rather than having this semantic tagging behavior for notes, I should automatically have lines like this converted into lines like the above
+
+* entry({ type  : "haskell_library",
+          title : "pyfi",
+	  url   : "https://github.com/Russell91/pyfi",
+          description : "This library provides a very nice interface from Haskell
+             to Python by letting you write Python code directly in Haskell by
+             means of template Haskell.",
+	  notes : " My idea behind this library is that although I like the way in which
+                   Haskell allows you to structure your programs, Python makes it easier
+                   to preform IO operations, and sometimes allows access to better libraries. "
+	  tags  : "want_to_learn"
+        }).
+
+* entry({ type  : "haskell_library",
+          title : "hol",
+	  url   : "http://hackage.haskell.org/package/hol",
+	  description : "provides an implementation of higher order logic in Haskell.",
+	  notes : " [[ This is related to my project of natural language processing
+             in Haskell : related_to(self,haskell_montague_semantics). ]], since the semantics
+             aspect of montague semantics is expressible in formal logic. Also, this is related to my project of [[ natural language understanding : natural_language_understanding ]], and wanting to build an [[ automated theorem prover : automated_theorem_prover ]] in Haskell to help be better understand [[logic programming]] "
+	}
+
+> log note "In the syntax for my semantic tagging system, I should have a system whereby tags such as [[ this one ]] are automatically processed by my conversion from natural language phrases into prolog-esque identifiers such as: [[ this one : this_one]]."
+
+log note "The word "also" is very vague. I was just thinking in the last note I made, that I wanted to make an "also" comment -- but "also" can have a lot of different meanings. "Also" can mean: "I am making a related note which is also a seperate thought". Or, it could mean something more along the lines of "on a completely unrelated note...". In an ideal language for logging notes like this, there would be two seperate, convinient words for this."
+
+log note "I quite like the idea of having content on these pages that is automatically generated. Maybe at the bottom of the page or something? For example, things that have been tagged elsewhere."
+
+log note "Another problem I need to think about is the types of relationships between articles like this. Perhaps there should be some way to have "meta-articles" which automatically source from different sub-topics. Maybe, at least while I am still experimenting with different design decisions, I can tag the various articles with different metadata specifying how to treat the processing of such things." "note(self), on_topic(self, semantic_wiki)"
+
+log note "Someone has already written a prolog parser in Parsec with Haskell, 
+            [[ {type : "prolog_parser", 
+                name : "parsec-prolog",
+                url  : "https://github.com/acharal/parsec-prolog",
+                description : "A prolog parser written in Haskell with parsec",
+            ]]. This might be useful for my [[ project : my_research_assistant ]]"
+
+Haskell Tools I like
+--------------------

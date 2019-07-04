@@ -1,0 +1,8 @@
+
+import Control.Monad.Reader
+
+f_read :: String -> Reader String String
+f_read s = do
+  in <- get
+  return (in ++ s)
+

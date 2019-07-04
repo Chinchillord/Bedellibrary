@@ -1,9 +1,6 @@
-# About this project
+# Bedelibry <img src="img/BedelibryLogo.png">
 
-This is an ambitious and multi-faceted (currently unnamed!) project that aims to provide
- a number of simple, inter-connected, open-source tools for the assistance of research and the
- organization of knowledge. This was motivated by one of the author's own frustrations with both
- traditional (paper) note-keeping, as well as with existing proprietary solutions such as Mendeley.
+Bedelibry is a library that aims to provide a number of simple, inter-connected, open-source tools for the assistance of research and the organization of knowledge. This was motivated by one of the author's own frustrations with both traditional (paper) note-keeping, as well as with existing proprietary solutions such as Mendeley.
  
  This project is currently in active development, so stay tuned for more updates, as well as
  specifications for the desired behaviour of our application, and example use-cases.  

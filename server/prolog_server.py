@@ -1,50 +1,78 @@
 from tinydb import TinyDB, Query # Here we use tinydb for users for our flask server
 from pyswip import Prolog
-from typing import Any, Union
+from typing import Any, Union, Dict
 
 class PrologServer():
     def __init__(self):
-        self.isRunning = False
+        self.is_running = False
         self.loaded_databases = []
         self.asserted_facts = []
         self.prolog = Prolog()
         
-    def startServer(self) -> bool:
+    def pl_server_start(self) -> bool:
         """ Start the server if it is not already running. Returns true if 
             server started successfully, returns false otherwise. """
-        if self.isRunning == False:
+        if not self.is_running:
             self.prolog = Prolog()
-        	self.isRunning = True
-        	return True
+            self.is_running = True
+            return True
         else:
             return False
         
-    def restartPrologServer(self):
+    def restart_prolog_server(self):
         """ """
         self.prolog = Prolog()
-        
-    def loadDatabase(self, database : Dict[str, Any]) -> Bool:
-        """ """
+
+    def load_database_from_file(self, database_path : str) -> bool:
+        if self.is_running:
+            self.prolog.consult(database_path)
+            return True
+        else:
+            return False
+    def load_database(self, database : Dict[str, Any]) -> bool:
+        """ (I'm honestly not sure what I had in mind with this) """
         if isRunning:
+            return False
             # TODO: implement this
         else:
             return False
         
-    def closeDatabase(self, database) -> bool:
+    def close_database(self, database) -> bool:
         """ """
-        if isRunning:
-        	for fact in database:
-        	    self.prolog.retract(fact)
-        	self.loaded_databases.remove(database)
+        if self.is_running:
+            for fact in database:
+                self.prolog.retract(fact)
+            self.loaded_databases.remove(database)
         	
-        	return True
+            return True
         else: 
             return False
         
-    def stopServer(self) -> Bool:
+    def pl_server_stop(self) -> bool:
         """ """
-        if self.isRunning:
+        if self.is_running:
             self.prolog = None
             return True
         else:
             return False
+
+    def pl_server_query_direct(self):
+        """ """
+        return self.prolog.query(query)
+
+    def pl_server_query(self, query: str):
+        """ """
+        return self.prolog.query(query)
+
+    def pl_server_ontology_add(self, s : str):
+        """ """
+
+
+    def pl_server_fact_add(self, query : str):
+        """ """
+        return self.db.add(query)
+
+
+    def pl_server_assert(self, query : str):
+        """ """
+        return self.prolog.assertz(query)
