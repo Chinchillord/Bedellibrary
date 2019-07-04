@@ -38,7 +38,10 @@ Bedelibry is a library that aims to provide a number of simple, inter-connected,
     * "Mycroft, list me some of the papers related to categorical quantum mechanics that I have 
        in my library of pdfs."
     * "Mycroft, copy the bibtex reference of this paper."
- 
+
+ ### Mobile interfaces
+
+ As part of this project, we aim to provide simple [Android](https://github.com/Sintrastes/bli-app-android), iOS, and perhaps eventually Ubuntu Touch interfaces to be able to interact with Bedelibry server instances.
   
  ### Visualization tools for ontologies
  
