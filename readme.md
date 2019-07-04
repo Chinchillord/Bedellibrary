@@ -1,4 +1,4 @@
-# Bedelibry <img src="img/BedelibryLogo.png" width="150">
+# <img src="img/BedelibryLogo.png" width="175"> Bedelibry
 
 Bedelibry is a library that aims to provide a number of simple, inter-connected, open-source tools for the assistance of research and the organization of knowledge. This was motivated by one of the author's own frustrations with both traditional (paper) note-keeping, as well as with existing proprietary solutions such as Mendeley.
  
