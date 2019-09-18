@@ -24,7 +24,16 @@ def parse_line_comments(file : Iterator[str]) -> List[str]:
 			tags + parseTags(line)
 		return tags
 
-			
+
+# Note: We should probably use tinydb here. Every time a document is updated,
+# call purge, parse the document, and then update the db with everything in the file.
+# The issue with this is that it will be inefficent for large files, and also this
+# doesn't handle errors well. What if the syntax is malformed, for instance?
+# In this case, we should probably keep the most recently extracted annotations, and 
+# notify the user somehow that the syntax of one of their documents is malformed.
+# There should also be a specific command to refresh specific documents and directories,
+# rather than this being the default behavior. By default, we should simply add
+# new data to the document.			
 def refresh_tex_comments(infile : str, outfile : str):
     """ takes a tex file *infile*, and a prolog file *outfile*, and
         updates *outfile* with all of the new prolog annotations in

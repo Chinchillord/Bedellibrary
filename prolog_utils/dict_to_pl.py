@@ -30,7 +30,7 @@ def dict_to_pl(d : Dict[str, Any]) -> Optional[str]:
         return (head + "(" + format_args(list(map(dict_to_pl, args))) + ")")
             
 
-def pl_to_dict():
+def pl_to_dict(s: str) -> Optional[Dict[str, Any]]:
     """ Parse prolog facts into dict format so that they can be stored in a database. 
         
         For example, this should also be able to parse terms such as:

@@ -6,7 +6,8 @@
 # and so a Prolog file is just paresed as a list of these
 
 from functools import reduce
-
+from typing import *
+from dict_to_pl import pl_to_dict
 
 def strip_whitespace(s : str) -> str:
     """ removes all whitespace from the string s. """
