@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\author{Nathan Bedell}
+\title{Bedelibry: A new framework for digital knowledge management.}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+% Give the coloring definitions for listings
+\lstset{
+  backgroundcolor=\color{white},   % choose the background color
+  basicstyle=\footnotesize,        % size of fonts used for the code
+  breaklines=true,                 % automatic line breaking only at whitespace
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+}
+
+% "define" Scala
+\lstdefinelanguage{scala}{
+  morekeywords={abstract,case,catch,class,def,%
+    do,else,extends,false,final,finally,%
+    for,if,implicit,import,match,mixin,%
+    new,null,object,override,package,%
+    private,protected,requires,return,sealed,%
+    super,this,throw,trait,true,try,%
+    type,val,var,while,with,yield},
+  otherkeywords={=>,<-,<\%,<:,>:,\#,@},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[n]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morestring=[b]"""
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  In this paper, I describe the overall design and project structure of my Bedelibry project, discuss some of the problems that this project was meant to solve, give examples of potential use cases, and discuss additional features which may be implemented at a later time.
+\end{abstract}
+
+\section{Introduction}
+
+When I started this project, the idea was simple. I wanted to have a knowledge base, with facts stored in Prolog in various places, with an API that could query these stores of knowledge. However, since then, I have moved away from using Prolog proper, for several reasons:
+
+\begin{enumerate}
+    \item Prolog is an untyped language, and I want users to be able to specify some kind of schema for the types of queries that they are can make.
+    \item Storing basic facts in prolog files scattered about the user's system is not a very scalable solution.
+\end{enumerate}
+
+\noindent To deal with these problems, I decided to design my own system dealing with:
+
+\begin{enumerate}
+    \item Defining and enforcing schemas which define an ontology of \textit{entities}, and \textit{relations} that can hold between those entities and other data types. 
+    \item Defining \textit{datasources}, which describe how to retrieve different facts (i.e. the fact that a certain relation holds between entities).
+    \item 
+\end{enumerate}
+
+\section{Experiments}
+
+\subsection{Entities in Haskell}
+
+In this section I will describe how an implementation of an "entity framework" might work in Haskell.
+
+\lstinputlisting[language=Haskell]{test.hs}
+
+\subsection{Entities in Idris}
+
+\lstinputlisting[language=Haskell]{test.idr}
+
+\subsection{Entities in Scala}
+
+\lstinputlisting[language=Scala]{test.scala}
+
+\section{Components}
+
+\section{Bedelbiry server}
+\subsection{Knowledge storage format}
+\subsection{The problem of entities and lingustic ambiguities}
+
+\section{The bli command line interface}
+\section{The bedelibry app}
+
+\section{Related tools}
+\subsection{SemFS}
+\subsection{Firefox extensions}
+\subsection{Natural language processing facilities}
+
+\section{Machine learning extensions to the framework}
+
+\end{document}
+

@@ -5,8 +5,24 @@ Bedelibry is a library that aims to provide a number of simple, inter-connected,
  This project is currently in active development, so stay tuned for more updates, as well as
  specifications for the desired behaviour of our application, and example use-cases.  
  
- ## Sub-projects:
+ ## Tools and components of Bedelibry:
+
+ ### Command line interface
+
+ [bli](https://github.com/Sintrastes/bli-tool/) is a command-line interface, written in Scala, for interacting with the different components of Bedelibry.
+
+ ### Bedelibry Prolog
+
+ [Bedelibry Prolog](https://github.com/Sintrastes/bli-prolog/) (or, bli prolog) is a dialect of pure prolog (i.e. without cut and the usual side-effects of prolog) with added features to faciliate interaction with the [bedelibry server](https://github.com/Sintrastes/bli-server/). Bedelibry Prolog is the "standard" way of interfacing with Bedelibry, and both the mobile interfaces to bedelibry, as well as the `bli` command line interface both rely on the syntax of bedelibry prolog. However, as you can read more about below, we eventualy would like to integrate a natural language processing engine into bedelibry as an alternative way of interfacing with the application. 
+
+ ### Mobile interfaces
+
+ As part of this project, we aim to provide simple [Android](https://github.com/Sintrastes/bli-app-android), iOS, and perhaps eventually Ubuntu Touch interfaces to be able to interact with Bedelibry server instances. These intefaces are currently a work in progress, and will be further developed once the API for the Bedelibry server is more solidified than it currently is. 
  
+ ### Bedelibry server
+
+ Each user of Bedelibry can host their own [server](https://github.com/Sintrastes/bli-server/) to have a personal store of data relevant to their own projects and research. Eventually, we hope to develop an API  that allows different users of bedebliry to communicate with eachother, and share facts relevant to their research projects of interest across different servers in a peer-to-peer architecture. 
+
  ### A simple semantic filesystem based on Prolog
  
  As a part of our framework, we will develop a simple, extensible semantic file system based
@@ -39,9 +55,6 @@ Bedelibry is a library that aims to provide a number of simple, inter-connected,
        in my library of pdfs."
     * "Mycroft, copy the bibtex reference of this paper."
 
- ### Mobile interfaces
-
- As part of this project, we aim to provide simple [Android](https://github.com/Sintrastes/bli-app-android), iOS, and perhaps eventually Ubuntu Touch interfaces to be able to interact with Bedelibry server instances.
   
  ### Visualization tools for ontologies
  

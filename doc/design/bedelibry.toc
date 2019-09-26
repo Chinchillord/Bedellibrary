@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Introduction}{1}% 
+\contentsline {section}{\numberline {2}Components}{1}% 
+\contentsline {section}{\numberline {3}Bedelbiry server}{1}% 
+\contentsline {section}{\numberline {4}The bli command line interface}{1}% 
+\contentsline {section}{\numberline {5}The bedelibry app}{1}% 
+\contentsline {section}{\numberline {6}SemFS}{1}% 
